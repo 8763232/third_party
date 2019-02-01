@@ -1,0 +1,13 @@
+G:/Shared_code/shared/src/libwebsockets/CMakeFiles/dist.dir
+G:/Shared_code/shared/src/libwebsockets/CMakeFiles/test-echo.dir
+G:/Shared_code/shared/src/libwebsockets/CMakeFiles/websockets.dir
+G:/Shared_code/shared/src/libwebsockets/CMakeFiles/websockets_shared.dir
+G:/Shared_code/shared/src/libwebsockets/CMakeFiles/test-client.dir
+G:/Shared_code/shared/src/libwebsockets/CMakeFiles/test-server.dir
+G:/Shared_code/shared/src/libwebsockets/CMakeFiles/test-server-extpoll.dir
+G:/Shared_code/shared/src/libwebsockets/CMakeFiles/test-fraggle.dir
+G:/Shared_code/shared/src/libwebsockets/CMakeFiles/test-ping.dir
+G:/Shared_code/shared/src/libwebsockets/CMakeFiles/PACKAGE.dir
+G:/Shared_code/shared/src/libwebsockets/CMakeFiles/INSTALL.dir
+G:/Shared_code/shared/src/libwebsockets/CMakeFiles/ALL_BUILD.dir
+G:/Shared_code/shared/src/libwebsockets/CMakeFiles/ZERO_CHECK.dir

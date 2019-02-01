@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="G:\Shared_code\shared\src\libwebsockets\CMakeFiles\776181b020ed47bb5ea899297d42fa4f\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{EC6BD1CF-BF24-34F2-91D9-B119D948ED14}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

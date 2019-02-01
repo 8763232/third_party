@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FDAB36A6-8FD2-4F43-9788-687E2306DFBF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>url</RootNamespace>
+    <ProjectName>gurl</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\;..\third_party\icu\source\i18n;..\third_party\icu\source\common</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\;..\third_party\icu\source\i18n;..\third_party\icu\source\common</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>icuuc.lib;icui18n.lib</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)$(Configuration)\$(ProjectName).lib"  "$(SolutionDir)$(Configuration)\..\..\shared\lib\$(ProjectName)\$(ProjectName).lib"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="gurl.cc" />
+    <ClCompile Include="origin.cc" />
+    <ClCompile Include="scheme_host_port.cc" />
+    <ClCompile Include="third_party\mozilla\url_parse.cc" />
+    <ClCompile Include="url_canon_etc.cc" />
+    <ClCompile Include="url_canon_filesystemurl.cc" />
+    <ClCompile Include="url_canon_fileurl.cc" />
+    <ClCompile Include="url_canon_host.cc" />
+    <ClCompile Include="url_canon_icu.cc" />
+    <ClCompile Include="url_canon_internal.cc" />
+    <ClCompile Include="url_canon_ip.cc" />
+    <ClCompile Include="url_canon_mailtourl.cc" />
+    <ClCompile Include="url_canon_path.cc" />
+    <ClCompile Include="url_canon_pathurl.cc" />
+    <ClCompile Include="url_canon_query.cc" />
+    <ClCompile Include="url_canon_relative.cc" />
+    <ClCompile Include="url_canon_stdstring.cc" />
+    <ClCompile Include="url_canon_stdurl.cc" />
+    <ClCompile Include="url_constants.cc" />
+    <ClCompile Include="url_parse_file.cc" />
+    <ClCompile Include="url_util.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="gurl.h" />
+    <ClInclude Include="origin.h" />
+    <ClInclude Include="scheme_host_port.h" />
+    <ClInclude Include="third_party\mozilla\url_parse.h" />
+    <ClInclude Include="url_canon.h" />
+    <ClInclude Include="url_canon_icu.h" />
+    <ClInclude Include="url_canon_internal.h" />
+    <ClInclude Include="url_canon_internal_file.h" />
+    <ClInclude Include="url_canon_ip.h" />
+    <ClInclude Include="url_canon_stdstring.h" />
+    <ClInclude Include="url_constants.h" />
+    <ClInclude Include="url_export.h" />
+    <ClInclude Include="url_file.h" />
+    <ClInclude Include="url_parse_internal.h" />
+    <ClInclude Include="url_test_utils.h" />
+    <ClInclude Include="url_util.h" />
+    <ClInclude Include="url_util_internal.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

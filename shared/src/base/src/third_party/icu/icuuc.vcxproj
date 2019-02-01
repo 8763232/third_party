@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{455448F0-20F8-443F-91D5-EE49B2BC0DC8}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>icuuc</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;U_COMMON_IMPLEMENTATION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>source\common;source\i18n;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <Lib>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;U_COMMON_IMPLEMENTATION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>source\common;source\i18n;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\common\appendable.cpp" />
+    <ClCompile Include="source\common\bmpset.cpp" />
+    <ClCompile Include="source\common\brkeng.cpp" />
+    <ClCompile Include="source\common\brkiter.cpp" />
+    <ClCompile Include="source\common\bytestream.cpp" />
+    <ClCompile Include="source\common\bytestrie.cpp" />
+    <ClCompile Include="source\common\bytestriebuilder.cpp" />
+    <ClCompile Include="source\common\bytestrieiterator.cpp" />
+    <ClCompile Include="source\common\caniter.cpp" />
+    <ClCompile Include="source\common\chariter.cpp" />
+    <ClCompile Include="source\common\charstr.cpp" />
+    <ClCompile Include="source\common\cmemory.c" />
+    <ClCompile Include="source\common\cstring.c" />
+    <ClCompile Include="source\common\cwchar.c" />
+    <ClCompile Include="source\common\dictbe.cpp" />
+    <ClCompile Include="source\common\dictionarydata.cpp" />
+    <ClCompile Include="source\common\dtintrv.cpp" />
+    <ClCompile Include="source\common\errorcode.cpp" />
+    <ClCompile Include="source\common\filterednormalizer2.cpp" />
+    <ClCompile Include="source\common\icudataver.c" />
+    <ClCompile Include="source\common\icuplug.cpp" />
+    <ClCompile Include="source\common\listformatter.cpp" />
+    <ClCompile Include="source\common\loadednormalizer2impl.cpp" />
+    <ClCompile Include="source\common\locavailable.cpp" />
+    <ClCompile Include="source\common\locbased.cpp" />
+    <ClCompile Include="source\common\locdispnames.cpp" />
+    <ClCompile Include="source\common\locid.cpp" />
+    <ClCompile Include="source\common\loclikely.cpp" />
+    <ClCompile Include="source\common\locmap.c" />
+    <ClCompile Include="source\common\locresdata.cpp" />
+    <ClCompile Include="source\common\locutil.cpp" />
+    <ClCompile Include="source\common\messagepattern.cpp" />
+    <ClCompile Include="source\common\normalizer2.cpp" />
+    <ClCompile Include="source\common\normalizer2impl.cpp" />
+    <ClCompile Include="source\common\normlzr.cpp" />
+    <ClCompile Include="source\common\parsepos.cpp" />
+    <ClCompile Include="source\common\patternprops.cpp" />
+    <ClCompile Include="source\common\propname.cpp" />
+    <ClCompile Include="source\common\propsvec.c" />
+    <ClCompile Include="source\common\punycode.cpp" />
+    <ClCompile Include="source\common\putil.cpp" />
+    <ClCompile Include="source\common\rbbi.cpp" />
+    <ClCompile Include="source\common\rbbidata.cpp" />
+    <ClCompile Include="source\common\rbbinode.cpp" />
+    <ClCompile Include="source\common\rbbirb.cpp" />
+    <ClCompile Include="source\common\rbbiscan.cpp" />
+    <ClCompile Include="source\common\rbbisetb.cpp" />
+    <ClCompile Include="source\common\rbbistbl.cpp" />
+    <ClCompile Include="source\common\rbbitblb.cpp" />
+    <ClCompile Include="source\common\resbund.cpp" />
+    <ClCompile Include="source\common\resbund_cnv.cpp" />
+    <ClCompile Include="source\common\ruleiter.cpp" />
+    <ClCompile Include="source\common\schriter.cpp" />
+    <ClCompile Include="source\common\serv.cpp" />
+    <ClCompile Include="source\common\servlk.cpp" />
+    <ClCompile Include="source\common\servlkf.cpp" />
+    <ClCompile Include="source\common\servls.cpp" />
+    <ClCompile Include="source\common\servnotf.cpp" />
+    <ClCompile Include="source\common\servrbf.cpp" />
+    <ClCompile Include="source\common\servslkf.cpp" />
+    <ClCompile Include="source\common\sharedobject.cpp" />
+    <ClCompile Include="source\common\simplepatternformatter.cpp" />
+    <ClCompile Include="source\common\stringpiece.cpp" />
+    <ClCompile Include="source\common\stringtriebuilder.cpp" />
+    <ClCompile Include="source\common\uarrsort.c" />
+    <ClCompile Include="source\common\ubidi.c" />
+    <ClCompile Include="source\common\ubidiln.c" />
+    <ClCompile Include="source\common\ubidiwrt.c" />
+    <ClCompile Include="source\common\ubidi_props.c" />
+    <ClCompile Include="source\common\ubrk.cpp" />
+    <ClCompile Include="source\common\ucase.cpp" />
+    <ClCompile Include="source\common\ucasemap.cpp" />
+    <ClCompile Include="source\common\ucasemap_titlecase_brkiter.cpp" />
+    <ClCompile Include="source\common\ucat.c" />
+    <ClCompile Include="source\common\uchar.c" />
+    <ClCompile Include="source\common\ucharstrie.cpp" />
+    <ClCompile Include="source\common\ucharstriebuilder.cpp" />
+    <ClCompile Include="source\common\ucharstrieiterator.cpp" />
+    <ClCompile Include="source\common\uchriter.cpp" />
+    <ClCompile Include="source\common\ucln_cmn.cpp" />
+    <ClCompile Include="source\common\ucmndata.c" />
+    <ClCompile Include="source\common\ucnv.c" />
+    <ClCompile Include="source\common\ucnv2022.cpp" />
+    <ClCompile Include="source\common\ucnvbocu.cpp" />
+    <ClCompile Include="source\common\ucnvdisp.c" />
+    <ClCompile Include="source\common\ucnvhz.c" />
+    <ClCompile Include="source\common\ucnvisci.c" />
+    <ClCompile Include="source\common\ucnvlat1.c" />
+    <ClCompile Include="source\common\ucnvmbcs.cpp" />
+    <ClCompile Include="source\common\ucnvscsu.c" />
+    <ClCompile Include="source\common\ucnvsel.cpp" />
+    <ClCompile Include="source\common\ucnv_bld.cpp" />
+    <ClCompile Include="source\common\ucnv_cb.c" />
+    <ClCompile Include="source\common\ucnv_cnv.c" />
+    <ClCompile Include="source\common\ucnv_ct.c" />
+    <ClCompile Include="source\common\ucnv_err.c" />
+    <ClCompile Include="source\common\ucnv_ext.cpp" />
+    <ClCompile Include="source\common\ucnv_io.cpp" />
+    <ClCompile Include="source\common\ucnv_lmb.c" />
+    <ClCompile Include="source\common\ucnv_set.c" />
+    <ClCompile Include="source\common\ucnv_u16.c" />
+    <ClCompile Include="source\common\ucnv_u32.c" />
+    <ClCompile Include="source\common\ucnv_u7.c" />
+    <ClCompile Include="source\common\ucnv_u8.c" />
+    <ClCompile Include="source\common\ucol_swp.cpp" />
+    <ClCompile Include="source\common\udata.cpp" />
+    <ClCompile Include="source\common\udatamem.c" />
+    <ClCompile Include="source\common\udataswp.c" />
+    <ClCompile Include="source\common\uenum.c" />
+    <ClCompile Include="source\common\uhash.c" />
+    <ClCompile Include="source\common\uhash_us.cpp" />
+    <ClCompile Include="source\common\uidna.cpp" />
+    <ClCompile Include="source\common\uinit.cpp" />
+    <ClCompile Include="source\common\uinvchar.c" />
+    <ClCompile Include="source\common\uiter.cpp" />
+    <ClCompile Include="source\common\ulist.c" />
+    <ClCompile Include="source\common\uloc.cpp" />
+    <ClCompile Include="source\common\uloc_keytype.cpp" />
+    <ClCompile Include="source\common\uloc_tag.c" />
+    <ClCompile Include="source\common\umapfile.c" />
+    <ClCompile Include="source\common\umath.c" />
+    <ClCompile Include="source\common\umutex.cpp" />
+    <ClCompile Include="source\common\unames.cpp" />
+    <ClCompile Include="source\common\unifiedcache.cpp" />
+    <ClCompile Include="source\common\unifilt.cpp" />
+    <ClCompile Include="source\common\unifunct.cpp" />
+    <ClCompile Include="source\common\uniset.cpp" />
+    <ClCompile Include="source\common\unisetspan.cpp" />
+    <ClCompile Include="source\common\uniset_closure.cpp" />
+    <ClCompile Include="source\common\uniset_props.cpp" />
+    <ClCompile Include="source\common\unistr.cpp" />
+    <ClCompile Include="source\common\unistr_case.cpp" />
+    <ClCompile Include="source\common\unistr_case_locale.cpp" />
+    <ClCompile Include="source\common\unistr_cnv.cpp" />
+    <ClCompile Include="source\common\unistr_props.cpp" />
+    <ClCompile Include="source\common\unistr_titlecase_brkiter.cpp" />
+    <ClCompile Include="source\common\unorm.cpp" />
+    <ClCompile Include="source\common\unormcmp.cpp" />
+    <ClCompile Include="source\common\uobject.cpp" />
+    <ClCompile Include="source\common\uprops.cpp" />
+    <ClCompile Include="source\common\uresbund.cpp" />
+    <ClCompile Include="source\common\uresdata.c" />
+    <ClCompile Include="source\common\ures_cnv.c" />
+    <ClCompile Include="source\common\uscript.c" />
+    <ClCompile Include="source\common\uscript_props.cpp" />
+    <ClCompile Include="source\common\usc_impl.c" />
+    <ClCompile Include="source\common\uset.cpp" />
+    <ClCompile Include="source\common\usetiter.cpp" />
+    <ClCompile Include="source\common\uset_props.cpp" />
+    <ClCompile Include="source\common\ushape.cpp" />
+    <ClCompile Include="source\common\usprep.cpp" />
+    <ClCompile Include="source\common\ustack.cpp" />
+    <ClCompile Include="source\common\ustrcase.cpp" />
+    <ClCompile Include="source\common\ustrcase_locale.cpp" />
+    <ClCompile Include="source\common\ustrenum.cpp" />
+    <ClCompile Include="source\common\ustrfmt.c" />
+    <ClCompile Include="source\common\ustring.cpp" />
+    <ClCompile Include="source\common\ustrtrns.cpp" />
+    <ClCompile Include="source\common\ustr_cnv.cpp" />
+    <ClCompile Include="source\common\ustr_titlecase_brkiter.cpp" />
+    <ClCompile Include="source\common\ustr_wcs.cpp" />
+    <ClCompile Include="source\common\utext.cpp" />
+    <ClCompile Include="source\common\utf_impl.c" />
+    <ClCompile Include="source\common\util.cpp" />
+    <ClCompile Include="source\common\util_props.cpp" />
+    <ClCompile Include="source\common\utrace.c" />
+    <ClCompile Include="source\common\utrie.cpp" />
+    <ClCompile Include="source\common\utrie2.cpp" />
+    <ClCompile Include="source\common\utrie2_builder.cpp" />
+    <ClCompile Include="source\common\uts46.cpp" />
+    <ClCompile Include="source\common\utypes.c" />
+    <ClCompile Include="source\common\uvector.cpp" />
+    <ClCompile Include="source\common\uvectr32.cpp" />
+    <ClCompile Include="source\common\uvectr64.cpp" />
+    <ClCompile Include="source\common\wintz.c" />
+    <ClCompile Include="source\stubdata\icudt.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
